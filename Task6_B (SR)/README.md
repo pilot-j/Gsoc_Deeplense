@@ -11,9 +11,9 @@ The base model used in this project is Masked AutoEncoder trained from scratch o
 The table below summarizes the model's performance across different configurations:
 | Mode             | MSE ↓  | PSNR ↑ | SSIM ↑ | # Finetune Params | # Epochs | Comment                          |
 |-----------------|--------|--------|--------|-------------------|----------|----------------------------------|
-| Freezed MAE     | 0.000921 | 30.3562 | 0.9524 | 167.7K            | 150      |     Only convolution layers trained                             |
-| Freezed Encoder | 0.000921 | 30.3562 | 0.9524 | 996K           | 150      |      None                            |
-| Full Finetune   | **0.000427** | **33.6931** | **0.9681** | **7.38M**          | 50       | Initialized from freezed enc ckpt |
+| Freezed MAE     |- | - | - | 167.7K            | 150      |     Only convolution layers trained/ Stopped Early                            |
+| Freezed Encoder | 0.000921 | 30.3489 | 0.9524 | 996K           | 150      |      None                            |
+| Full Finetune   | **0.000427** | **33.6579** | **0.9681** | **7.38M**          | 50       | Initialized from freezed enc ckpt |
 
 
 - **MSE (Mean Squared Error)**: Lower is better.
