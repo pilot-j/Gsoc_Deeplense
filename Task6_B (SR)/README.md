@@ -21,11 +21,11 @@ The table below summarizes the model's performance across different configuratio
 - **SSIM (Structural Similarity Index Measure)**: Higher is better.
 
 ## Model Architecture
-![SRMAE](../images/SRAME_Model_diag.png)
+![SRMAE](../images/SRMAE_Model_diag.png)
 
 ## Training / Val Loss Curves
 - **Freezed Encoder Finetuning**  
-  ![Freezed Encoder Finetuning](../images/SRMAE_freezeenc.png)
+  ![Freezed Encoder Finetuning](../images/SRMAE_freezedenc.png)
 
 - **Full Finetuning**  
   ![Full Finetuning](../images/SRMAE_Fullfine.png)
