@@ -21,17 +21,17 @@ The table below summarizes the model's performance across different configuratio
 - **SSIM (Structural Similarity Index Measure)**: Higher is better.
 
 ## Model Architecture
-![SRMAE](images/SRAME_Model_diag.png)
+![SRMAE](../images/SRAME_Model_diag.png)
 
 ## Training / Val Loss Curves
 - **Freezed Encoder Finetuning**  
-  ![Freezed Encoder Finetuning](images/SRMAE_freezeenc.png)
+  ![Freezed Encoder Finetuning](../images/SRMAE_freezeenc.png)
 
 - **Full Finetuning**  
-  ![Full Finetuning](images/SRMAE_Fullfine.png)
+  ![Full Finetuning](../images/SRMAE_Fullfine.png)
 
 ## Sample Outputs
-  ![Image Maps](images/SRMAE_img_map.png)
+  ![Image Maps](../images/SRMAE_img_map.png)
 ## Training & Fine-Tuning
 - Dataset: Provided dataset was organised into 90:10 Train:Val split. [mae-sr-dataset-split](https://www.kaggle.com/datasets/mldtype/mae-sr-dataset-split) 
 - Optimiser: AdamW with weight_decay = 1e-4
