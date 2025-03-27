@@ -1,7 +1,12 @@
 # Gsoc_Deeplense
 Entry for GSoc Deeplense 'Foundational Model' project. Contains jupyter nbs, scripts and results of tasks.
+Results for specific task (task 6) can be reproduced by running [validation_nb](validation_deeplense_task6.ipynb) notebook on kaggle
 
+Dataset links (organised into train val spilts and uploaded on kaggle):
+1. [Pretraining and classification finetuning](https://www.kaggle.com/datasets/mldtype/masked-autoencoder)
+2. [Super resolution finetuning](https://www.kaggle.com/datasets/mldtype/mae-sr-dataset-split/data)
 
+WEIGHTS(Kaggle) - [official_weights](https://www.kaggle.com/datasets/mldtype/weights-ml4sci-all)
 # Consolidated Task Results
 
 This document reports the results of all tasks, collectively presenting key model performance metrics.
@@ -16,7 +21,7 @@ This document reports the results of all tasks, collectively presenting key mode
 | SuperResolution MAE    | 7.38M    | Full Finetuning | PSNR - 33.6579, SSIM - 0.9681, MSE- 0.00042 | Task6B
 | MAE Classifier    | ~200K    | Linear Probing | Micro-avg AUC - 0.58  | Task6A
 
-WEIGHTS(Kaggle) - [official_weights](https://www.kaggle.com/datasets/mldtype/weights-ml4sci-all)
+
 
 
 ## Notes
