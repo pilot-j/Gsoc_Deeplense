@@ -1,3 +1,5 @@
+<WIP>
+
 # Approach for Masked Autoencoder Pretraining and Classification Fine-tuning
 
 ## 1. Pretraining the Masked Autoencoder
@@ -50,6 +52,7 @@ Shallower encoders require deeper MLP heads, whereas deeper encoders perform wel
 - A **custom MAE** was trained from scratch with BCELogit loss for better reconstruction.
 - **Three architecture variants** were evaluated with different embedding sizes, patch sizes, and masking ratios.
 - **Two-stage classification fine-tuning** (Linear Probing + Full Fine-Tuning) was conducted.
+- Achieved **~87% classification accuracy with 7M parameters** and a **micro-averaged AUC of 0.97**.
 - Achieved **85% classification accuracy with 2M parameters** and a **micro-averaged AUC of 0.93**.
 
 This structured approach ensures an efficient model with a balance between accuracy and computational efficiency.
