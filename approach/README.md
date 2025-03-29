@@ -47,6 +47,14 @@ Shallower encoders require deeper MLP heads, whereas deeper encoders perform wel
 | Deep        | Heavier    | Shallow      | ~200K      |
 
 ---
+## 3. SuperResolution Fine-Tuning
+For super-resolution fine-tuning, we use an upsampling CNN network incorporating PixelShuffle and ConvTranspose2d layers. Before resizing the input image to match the encoder's expected size (from 75×75 → 64×64), it passes through a learnable kernel. This helps mitigate information loss due to resizing. While a static averaging kernel is an alternative, our learnable filter improves performance by ~1 dB. L1 loss is used for training.
+
+Key observations:
+- Training the CNN upsampler alone struggles to exceed ~21 dB PSNR.
+- Training with an unfrozen decoder + CNN significantly improves results, reaching ~30 dB PSNR.
+- Best performance is achieved through full fine-tuning of both the MAE backbone and the CNN upsampler.
+
 
 ## Summary
 - A **custom MAE** was trained from scratch with BCELogit loss for better reconstruction.
@@ -54,6 +62,6 @@ Shallower encoders require deeper MLP heads, whereas deeper encoders perform wel
 - **Two-stage classification fine-tuning** (Linear Probing + Full Fine-Tuning) was conducted.
 - Achieved **~87% classification accuracy with 7M parameters** and a **micro-averaged AUC of 0.97**.
 - Achieved **85% classification accuracy with 2M parameters** and a **micro-averaged AUC of 0.93**.
+- Achieved **0.9681 SSIM and ~33.6 dB PSNR with 7M parameters** on SR task.
 
-This structured approach ensures an efficient model with a balance between accuracy and computational efficiency.
 
