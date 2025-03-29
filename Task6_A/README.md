@@ -6,9 +6,21 @@ This project utilizes a pretrained **Masked Autoencoder (MAE)** for image classi
 2. **Full Fine-tuning:** Unfreezing the MAE and optimizing all model parameters for better performance.
 
 ## Pretraining Details
-The MAE model was pretrained in a self-supervised manner by reconstructing masked image patches. Below are the loss curve and sample reconstructed images from pretraining:
 
-### Pretraining Loss Curve
+The MAE model was pretrained using a self-supervised learning approach by reconstructing masked image patches. The pretraining was conducted in two phases:  
+
+1. **Without Augmentations** (100 epochs)  
+2. **With Augmentations** (250 epochs)  
+
+During pretraining with augmentations, validation loss (BCEWithLogitsLoss) quickly stabilized around **0.02** at approximately **20 epochs**, suggesting that augmentations primarily contributed to initial rapid learning but had limited long-term benefits. Consequently, epochs between **20 and 100** appeared ineffective.  
+
+In total, **350 epochs** were run (**100 epochs without augmentations + 250 epochs with augmentations**).
+Below are the loss curve and sample reconstructed images from pretraining:
+
+### Pretraining Loss Curve with augmentation ( 1 - 100 epochs)
+![Pretraining Loss Curve](../images/Task6A/task6A_loss_curve_withaug.png)
+
+### Pretraining Loss Curve without augmentation ( 101 - 350 epochs)
 ![Pretraining Loss Curve](../images/Task6A/task6A_loss_curve.png)
 
 ### Pretraining Output Samples
