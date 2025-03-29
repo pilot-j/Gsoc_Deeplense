@@ -25,7 +25,9 @@ This document reports the results of all tasks, collectively presenting key mode
 
 
 
+
 ## Notes
+- The models are kept relatively small (< ~10M parameters) due to computational constraints. This approach has also helped me assess whether small ViT-based models can be effectively fine-tuned. I believe that scaling the encoder to larger dimension sizes would significantly improve the results. From my experimentation with embedding dimensions ranging from 128 to 300, I can anecdotally confirm this trend.
 - The reported metric values represent the best performance achieved in the respective modes.
 - Further details in task specific folders
 
