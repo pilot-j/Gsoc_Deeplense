@@ -1,9 +1,10 @@
 # Fine-tuning a Pretrained Masked Autoencoder (MAE) for Classification
 
 ## Introduction
-This project utilizes a pretrained **Masked Autoencoder (MAE)** for image classification on a given dataset. The approach consists of two stages:
-1. **Linear Probing:** Training a classification head while keeping the pretrained MAE frozen.
-2. **Full Fine-tuning:** Unfreezing the MAE and optimizing all model parameters for better performance.
+This project utilizes a pretrained **Masked Autoencoder (MAE)** for image classification on a given dataset. The approach consists of 3 stages:
+1. **Pre-training** the masked autoencoder with random masking. This model is then finetuned for downstream tasks.
+2. **Linear Probing:** Training a classification head while keeping the pretrained MAE frozen.
+3. **Full Fine-tuning:** Unfreezing the MAE and optimizing all model parameters for better performance.
 
 ## Pretraining Details
 
