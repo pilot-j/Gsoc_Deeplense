@@ -15,7 +15,7 @@ The MAE model was pretrained using a self-supervised learning approach by recons
 
 During pretraining with augmentations, validation loss (BCEWithLogitsLoss) quickly stabilized around **0.02** at approximately **20 epochs**, suggesting that augmentations primarily contributed to initial rapid learning but had limited long-term benefits. Consequently, epochs between **20 and 100** appeared ineffective.  
 
-In total, **350 epochs** were run (**100 epochs without augmentations + 250 epochs with augmentations**).
+In total, **350 epochs** were run (**100 epochs with augmentations + 250 epochs without augmentations**).
 Below are the loss curve and sample reconstructed images from pretraining:
 
 ### Pretraining Loss Curve with augmentation ( 1 - 100 epochs)
