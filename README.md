@@ -14,13 +14,13 @@ This document reports the results of all tasks, collectively presenting key mode
 
 ## Results Table
 
-| Model       | # Train Params | Mode     | Metric |TASK
-|------------|---------|---------|--------|-------|
-| CNN Classifier   | 13.6M     | Training | AUC - 1 for all classes  | common task
-| Masked AutoEncoder    | 7.25M    | Pre training  | -| Task6A
-| MAE Classifier    | 6.6M    | Probing + Finetuning| Micro-Avg AUC - 0.97  | Task6A
-| SuperResolution MAE    | 7.38M    | Full Finetuning | PSNR - 33.6579, SSIM - 0.9681, MSE- 0.00042 | Task6B
-| MAE Classifier    | ~200K    | Linear Probing | Micro-avg AUC - 0.58  | Task6A
+|TASK | Model       | # Train Params | Mode     | Metric 
+|------------|------------|---------|---------|--------|
+| common task| CNN Classifier   | 13.6M     | Training | AUC - 1 for all classes 
+| Task6A | Masked AutoEncoder    | 7.25M    | Pre training  | -
+| Task6A| MAE Classifier    | 6.6M    | Probing + Finetuning| Micro-Avg AUC - 0.97  
+| Task6B| SuperResolution MAE    | 7.38M    | Full Finetuning | PSNR - 33.6579, SSIM - 0.9681, MSE- 0.00042 
+| Task6A | MAE Classifier    | ~200K    | Linear Probing | Micro-avg AUC - 0.58  
 
 
 
