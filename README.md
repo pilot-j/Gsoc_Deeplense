@@ -17,7 +17,7 @@ This document reports the results of all tasks, collectively presenting key mode
 |TASK | Model       | # Train Params | Mode     | Metric 
 |------------|------------|---------|---------|--------|
 | common task| CNN Classifier   | 13.6M     | Training | AUC - 1 for all classes 
-| Task6A | Masked AutoEncoder    | 7.25M    | Pre training  | -
+| Task6A | Masked AutoEncoder    | 7.25M    | Pre training  | Val loss - ~0.0062 (BCEWithLogitsLoss)
 | Task6A| MAE Classifier    | 6.6M    | Probing + Finetuning| Micro-Avg AUC - 0.97  
 | Task6B| SuperResolution MAE    | 7.38M    | Full Finetuning | PSNR - 33.6579, SSIM - 0.9681, MSE- 0.00042 
 | Task6A | MAE Classifier    | ~200K    | Linear Probing | Micro-avg AUC - 0.58  
@@ -27,7 +27,7 @@ This document reports the results of all tasks, collectively presenting key mode
 
 
 ## Notes
-- The models are kept relatively small (< ~10M parameters) due to computational constraints. This approach has also helped me assess whether small ViT-based models can be effectively fine-tuned. I believe that scaling the encoder to larger dimension sizes would significantly improve the results. From my experimentation with embedding dimensions ranging from 128 to 300, I can anecdotally confirm this trend.
+- The MAE models are kept relatively small (< ~10M parameters) due to computational constraints. This approach has also helped me assess whether small ViT-based models can be effectively fine-tuned. I believe that scaling the encoder to larger dimension sizes would significantly improve the results. From my experimentation with embedding dimensions ranging from 128 to 300, I can anecdotally confirm this trend.
 - The reported metric values represent the best performance achieved in the respective modes.
 - Further details in task specific folders
 
