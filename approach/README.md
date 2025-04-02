@@ -1,7 +1,6 @@
-<WIP>
+Note: Given the computational constraints, my goal was not to push for the absolute best performance but to explore how well small models can be optimized for these task. This work serves as a proof of concept, demonstrating that with careful training, lightweight MAEs (within ~10 M) can achieve reasonable downstream performance on provided dataset. Instead of relying on larger models, I focused on maximizing efficiency and extracting the most from compact architectures. 
 
-# Approach for Masked Autoencoder Pretraining and Classification Fine-tuning
-
+## Approach for Masked Autoencoder Pretraining and Classification Fine-tuning
 ## 1. Pretraining the Masked Autoencoder
 We adapted the official implementation of Masked Autoencoders (MAE) and designed a custom architecture trained from scratch. The model follows an **asymmetric encoder-decoder architecture**, ensuring that the encoder learns a dense representation.
 
@@ -34,17 +33,20 @@ The classification task was tackled using a **two-step fine-tuning** process:
 ### Step 2: Full Fine-Tuning
 - The entire model is trained with **separate learning rates** for the encoder and the MLP.
 - **AdamW optimizer** is used.
-- The model is trained for **~150 epochs**, achieving:
-  - **85% accuracy** with just **2M parameters**.
-  - **Micro-averaged AUC of 0.93**.
+- The 128 encoder embedding model is finetuned for **~150 epochs**, achieving:
+  - 85% accuracy** with just **2M parameters.
+  - Micro-averaged AUC of 0.93.
+- The 256 encoder embedding model is also finetuned for **~150 epochs**, achieving:
+  - 87% accuracy with just 6M parameters.
+  - Micro-averaged AUC of 0.97.
 
 ### Model Size vs. MLP Depth Trade-off
-Shallower encoders require deeper MLP heads, whereas deeper encoders perform well with relatively shallow MLPs.
+Shallower encoders require deeper MLP heads, whereas broader encoders perform well with relatively shallow MLPs.
 
 | Encoder Size | Parameters | MLP Head Size | Parameters |
 |-------------|------------|--------------|------------|
 | Shallow     | ~1.5M      | Deep         | ~700K      |
-| Deep        | Heavier    | Shallow      | ~200K      |
+| Broad        | ~6M    | Shallow      | ~200K      |
 
 ---
 ## 3. SuperResolution Fine-Tuning
