@@ -24,6 +24,9 @@ Below are the loss curve and sample reconstructed images from pretraining:
 ### Pretraining Loss Curve without augmentation ( 101 - 350 epochs)
 ![Pretraining Loss Curve](../images/Task6A/task6A_loss_curve.png)
 
+### Pretraining (without aug) progression 
+![Pretraining Progression](../images/Task6A/task6_pretraining_progression.png)
+
 ### Pretraining Output Samples
 ![Reconstructed Images](../images/Task6A/task6A_pretrain_img_map.png)
 
