@@ -8,6 +8,24 @@ Dataset links (organised into train val spilts and uploaded on kaggle):
 2. [Super resolution finetuning](https://www.kaggle.com/datasets/mldtype/mae-sr-dataset-split/data)
 
 WEIGHTS(Kaggle) - [official_weights](https://www.kaggle.com/datasets/mldtype/weights-ml4sci-all)
+
+<details>
+  <summary><strong>File Names and Weights as on Kaggle</strong></summary>
+
+  ### Common Task
+  - **CustomResnet** - `customnet_classification_final.pth`
+
+  ### Task 6
+  - **Base MAE** - `best_mae_vit_model_256emb.pth`
+  - **Finetuned MAE based classifier** - `FT_Classification_final_256emb.pth`
+  - **Finetuned Super Resolution Model** - `best_sr_mae_model_FT_256emb.pth`
+
+  ### Addendum
+  - **Linear Probing** - `LP_Classification_final_256emb.pth`
+  - **SR with freezed Encoder** - `best_sr_mae_model_freezed_finetune_256emb.pth`
+
+</details>
+
 # Consolidated Task Results
 
 This document reports the results of all tasks, collectively presenting key model performance metrics.
