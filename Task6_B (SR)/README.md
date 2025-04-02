@@ -41,7 +41,7 @@ The table below summarizes the model's performance across different configuratio
 | Encoder         | 8e-5      |
 | Others         | 5e-4      |
 
-- Scheduler: CosineAnnealingWarmRestarts with T_0=10, T_mult=1, eta_min = 8e-5
+- Scheduler: CosineAnnealingWarmRestarts with T_0=10, T_mult=1, eta_min = 1e-5
 - Loss function: **L1 Loss**.
 - Data augmentation techniques: None. Images were already normalised.
 
